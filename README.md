@@ -48,3 +48,6 @@ The following tools are downloaded and installed by setup.sh file if not already
 * **hisat2** https://ccb.jhu.edu/software/hisat2/index.shtml
 * **diamond** https://github.com/bbuchfink/diamond
 
+### Metagenomes to viromes ###
+
+ 	vrmgfrap_pic.png
