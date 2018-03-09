@@ -50,4 +50,6 @@ The following tools are downloaded and installed by setup.sh file if not already
 
 ### Metagenomes to viromes ###
 
- 	vrmgfrap_pic.png
+![vrmg!](vrmgfrap_pic.png)
+
+ 	
