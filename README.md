@@ -1,4 +1,5 @@
 # FRAP
+![fragment recruitment assembly purification!](frap/FRAP_pic.png)
 
 Fragment Recruitment Assembly Purification 
 
