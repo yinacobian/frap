@@ -1,4 +1,4 @@
-# frap
+# FRAP
 
 Fragment Recruitment Assembly Purification 
 
