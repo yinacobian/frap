@@ -6,9 +6,11 @@ Fragment Recruitment Assembly Purification
 Quick and simple bioinformatics!
 
 FRAP is a robust and simple algorithm to compare a genomic dataset to a database
+### Use ###
 
 Use: jmf3.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat]
 
+### I/O ### 
 Input 
 Database: fasta file containing the sequences to compare
 Dataset: fasta file with query sequences
@@ -32,5 +34,6 @@ FRAP require a set of tools, most of these tools are installed using the setup.s
   
 The following tools are downloaded and installed by setup.sh file if not already installed and in your path
 * **SMALT** http://www.sanger.ac.uk/science/tools/smalt-0
+* **hisat2** https://ccb.jhu.edu/software/hisat2/index.shtml
 * **diamond** https://github.com/bbuchfink/diamond
 
