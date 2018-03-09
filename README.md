@@ -5,6 +5,8 @@ Fragment Recruitment Assembly Purification
 
 Quick and simple bioinformatics!
 
+### What is FRAP? ###
+
 FRAP is a robust and simple algorithm to compare a genomic dataset to a database
 
 ![jmf!](jmf_pic.png)
@@ -13,9 +15,11 @@ By using the same method across databases and datasets the comparissons are eass
 
 ![frapnorma!](frap_normalization_pic.png)
 
-### Use ###
+### Usage ###
 
-Use: jmf3.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat]
+Use:
+
+jmf3.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat]
 
 ### I/O ### 
 Input 
