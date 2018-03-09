@@ -11,6 +11,8 @@ FRAP is a robust and simple algorithm to compare a genomic dataset to a database
 
 By using the same method across databases and datasets the comparissons are eassier 
 
+![frapnorma!](frap_normalization_pic.png)
+
 ### Use ###
 
 Use: jmf3.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat]
