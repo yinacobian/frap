@@ -7,7 +7,7 @@ Quick and simple bioinformatics!
 
 FRAP is a robust and simple algorithm to compare a genomic dataset to a database
 
-![jmf!](jmf_pic.png)
+![jmf!](jmf_pic.png | width=100)
 
 By using the same method across databases and datasets the comparissons are eassier 
 
