@@ -5,3 +5,10 @@ perl jmf3.pl
 /home/acobian/CF418/mt/P08_genes_coverage/DS 
 /home/acobian/CF418/mt/P08_genes_coverage/OUT 
 smalt
+
+
+
+Get the files from: 
+
+cp /home2/SHARED/frap_tutorial/frap_normalization.pl . 
+cp /home2/SHARED/frap_tutorial/jmf3.pl . 
