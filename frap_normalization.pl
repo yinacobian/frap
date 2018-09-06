@@ -11,11 +11,14 @@ my %desc;
 my %Tj;
 my $tj_file;
 my $millon;
+my $lmean;
+
 GetOptions ("f=s"     => \$id,
 	    "h"       => \$hits_only,	
 	    "n"       => \$norm_only,    
 	    "t=s"       => \$tj_file,
- 	    "m"       => \$millon,	    
+ 	    "m"       => \$millon,
+		"lmean"	=> \$lmean,
 );  # flag
 
 my @glob_ARGV=@ARGV;
@@ -66,16 +69,16 @@ foreach(@ARGV) {
 	chomp;
 	open $filehandlers{$_}, '<' , $_  or die "Can't open $_ for output: $!";
 	my $filename = (split(/\//,$_))[-1];
-	my $sample_id = (split(/\./,$filename))[0];
-	my @sample = split(/\_/,$sample_id);
+	my $sample_id = (split(/\./,$filename))[1];
+	#my @sample = split(/\_/,$sample_id);
 	
 	#getting IDS from filename, this need to be much more general
 
-	my $kk = pop @sample;
-	$kk = pop @sample;
-	$kk = pop @sample;
-	$kk = join('_',@sample);
-	$samples{$_} = $kk;	
+	#my $kk = pop @sample;
+	#$kk = pop @sample;
+	#$kk = pop @sample;
+	#$kk = join('_',@sample);
+	$samples{$_} = $sample_id;	
 }
 
 
@@ -108,7 +111,7 @@ foreach(@glob_ARGV) {
 foreach(@glob_ARGV) {
 	my $f_id=$_;
 	foreach(@order) {
-		$norm{$f_id}->{$_}=($list{$f_id}->{$_}/$Tj{$samples{$f_id}})*(300/$length{$_});
+		$norm{$f_id}->{$_}=($list{$f_id}->{$_}/$Tj{$samples{$f_id}})*($lmean/$length{$_});
 	}
 }
 
@@ -135,4 +138,5 @@ foreach(@order) {
 	}
 	print "\t$desc{$g_id}\n";
 }
+
 
