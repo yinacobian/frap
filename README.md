@@ -19,11 +19,11 @@ By using the same method across databases and datasets the comparissons are eass
 
 Use:
 
-jmf3.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat]
+jmf4.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat] [average genome length to use, recommended 50000 for phages]
 
 Example: 
 
-perl jmf3.pl /home/acobian/mt/DB/CDS_Pseudomonas_aeruginosa_WCHPA075019.fasta /home/acobian/mt/DS /home/acobian/mt/OUT smalt
+perl jmf4.pl /home/acobian/mt/DB/CDS_Pseudomonas_aeruginosa_WCHPA075019.fasta /home/acobian/mt/DS /home/acobian/mt/OUT smalt 5000000
 
 ### I/O ### 
 Input 
