@@ -31,8 +31,9 @@ Database: fasta file containing the sequences to compare
 Dataset: fasta file with query sequences
 
 Output
-Normalized hits 
-Number of hits
+Table with normalized hits 
+Table with normailzed hits multiplied by a million 
+Table with number of hits
 
 Optional outputs
 fasta file with reads that map to the refenrence database
