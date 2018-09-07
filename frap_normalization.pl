@@ -18,7 +18,7 @@ GetOptions ("f=s"     => \$id,
 	    "n"       => \$norm_only,    
 	    "t=s"       => \$tj_file,
  	    "m"       => \$millon,
-		"lmean"	=> \$lmean,
+		"l=i"	=> \$lmean,
 );  # flag
 
 my @glob_ARGV=@ARGV;
