@@ -95,7 +95,7 @@ close OUT;
 
 ##5. Normalization
 
-$run="perl frap_normalization.pl -t $ARGV[2]/tj.txt -m -l $ARGV[4] -f $ARGV[0] $ARGV[2]/*.tab > $ARGV[2]/all_normalized.txt";
+$run="perl frap_normalization.pl -t $ARGV[2]/tj.txt -n -l $ARGV[4] -f $ARGV[0] $ARGV[2]/*.tab > $ARGV[2]/all_normalized.txt";
 #print "$run\n";
 system $run;
 
@@ -106,4 +106,9 @@ $run="perl frap_normalization.pl -t $ARGV[2]/tj.txt -h -f $ARGV[0] $ARGV[2]/*.ta
 system $run;
 
 
+##7. Normalization million   
+
+$run="perl frap_normalization.pl -t $ARGV[2]/tj.txt -m -l $ARGV[4] -f $ARGV[0] $ARGV[2]/*.tab > $ARGV[2]/all_normalized_per_million.txt";
+#print "$run\n";
+system $run;
 
