@@ -59,6 +59,8 @@ The following tools are downloaded and installed by setup.sh file if not already
 
 ### FRAP Graphical outputs ###
 
+This is included in jmf5.pl 
+
 Heatmap
 
 Coverage plots for top 5 elements in the database with highest average FRAP values across the dataset 
