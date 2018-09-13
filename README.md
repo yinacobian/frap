@@ -57,4 +57,12 @@ The following tools are downloaded and installed by setup.sh file if not already
 
 ![vrmg!](vrmgfrap_pic.png)
 
+### FRAP Graphical outputs ###
+
+Heatmap
+
+Coverage plots for top 5 elements in the database with highest average FRAP values across the dataset 
+
+Fragment recruitment plots for top 5 elements in the database with highest average FRAP values across the dataset
+
  	
