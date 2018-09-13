@@ -118,7 +118,6 @@ print "@IDS\n";
 #grep '>' Fivephages.fasta | cut -c 2-
 
 #Get individual mpileup files:
-
 foreach(@IDS) {
 	$run = "samtools view -b -T $ARGV[0] $ARGV[2]/$_"."_vs_$db_id.sam -o $ARGV[2]/map_$_"."_vs_$db_id.bam";
 	#print "$run\n";
@@ -135,11 +134,18 @@ foreach(@IDS) {
 	$run = "cut -f 1 $ARGV[2]/cov_mpileup_map_$_"."_vs_$db_id.tab | sort -n | uniq > $ARGV[2]/db_ids_with_coverage.txt";
 	#print "$run\n";
 	system $run;
-	#$run = "cat $ARGV[2]/db_ids_with_coverage.txt | xargs -I {dbelement} sh -c '"'grep {dbelement} cov_mpileup_map_$_"'"""'"."'"""'"_vs_$db_id.tab > {dbelement}_cov_mpileup_map_$_"'"""'"."'"""'"_vs_$db_id.tab'"'";
-	#print "$run\n";
-	#system $run;
+	my $gname = "/db_ids_with_coverage.txt";
+	my $path_to_gname = $ARGV[2].$gname;
+	open my $handle, '<', $path_to_gname;
+	chomp(my @gnames = <$handle>);
+	close $handle;
+	$datasetID = $_;
+		foreach (@gnames) {
+			$run = "grep '$_' $ARGV[2]/cov_mpileup_map_$datasetID"."_vs_$db_id.tab > $ARGV[2]/$_"."_cov_mpileup_map_$datasetID"."_vs_$db_id.tab";
+			#print "$run\n";
+			system $run;
+		}	
 }
-
 
 #Print R script to get individual coverage plots: 
 
