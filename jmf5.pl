@@ -114,8 +114,9 @@ print "@IDS\n";
 
 ##8. Coverage plots for top 5 genomes
 
+#Need to fix how to get the top five genomes to do coverage plots for 
 #Get genome ids and names from database file
-#grep '>' Fivephages.fasta | cut -c 2-
+#grep '>' Fivephages.fasta | cut -c 2- ..... > db_id_name.txt
 
 #Get individual mpileup files:
 foreach(@IDS) {
@@ -128,10 +129,7 @@ foreach(@IDS) {
 	$run = "samtools mpileup -d 10000000 -a --reference $ARGV[0] $ARGV[2]/sorted_map_$_"."_vs_$db_id.bam -o $ARGV[2]/mpileup_map_$_"."_vs_$db_id.tab";
 	#print "$run\n";
 	system $run;
-	$run = "cut -f 1,4 $ARGV[2]/mpileup_map_$_"."_vs_$db_id.tab > $ARGV[2]/cov_mpileup_map_$_"."_vs_$db_id.tab";
-	#print "$run\n";
-	system $run;
-	$run = "cut -f 1 $ARGV[2]/cov_mpileup_map_$_"."_vs_$db_id.tab | sort -n | uniq > $ARGV[2]/db_ids_with_coverage.txt";
+	$run = "cut -f 1 $ARGV[2]/mpileup_map_$_"."_vs_$db_id.tab | sort -n | uniq > $ARGV[2]/db_ids_with_coverage.txt";
 	#print "$run\n";
 	system $run;
 	my $gname = "/db_ids_with_coverage.txt";
@@ -139,15 +137,18 @@ foreach(@IDS) {
 	open my $handle, '<', $path_to_gname;
 	chomp(my @gnames = <$handle>);
 	close $handle;
-	$datasetID = $_;
+	$samplename = $_;
 		foreach (@gnames) {
-			$run = "grep '$_' $ARGV[2]/cov_mpileup_map_$datasetID"."_vs_$db_id.tab > $ARGV[2]/$_"."_cov_mpileup_map_$datasetID"."_vs_$db_id.tab";
+			$genomeid = $_;
+			$run = "grep '$genomeid' $ARGV[2]/mpileup_map_$samplename"."_vs_$db_id.tab | cut -f 1,4 > $ARGV[2]/cov_$genomeid"."_in_$samplename.tab";
 			#print "$run\n";
 			system $run;
-		}	
+			$run ="Rscript PlotCoverageFRAP.R $genomeid $samplename $ARGV[2]";
+			system $run;
+		}
+	$run = "rm $ARGV[2]/db_ids_with_coverage.txt";
+	system $run;
+	#print "$run\n";
 }
-
-#Print R script to get individual coverage plots: 
-
 
 ##9. Fragment recruitment plots for top 5 genomes 
