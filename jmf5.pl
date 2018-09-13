@@ -117,6 +117,7 @@ print "@IDS\n";
 #Need to fix how to get the top five genomes to do coverage plots for 
 #Get genome ids and names from database file
 #grep '>' Fivephages.fasta | cut -c 2- ..... > db_id_name.txt
+# grep '>' database.fasta |  cut -c 2- | sed -E 's/^([^ ]*) /\1\t/'> db_id_name.txt
 
 #Get individual mpileup files:
 foreach(@IDS) {
