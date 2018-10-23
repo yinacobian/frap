@@ -74,7 +74,15 @@ If you don't have permissions in /usr/local/bin redirect them to a new directory
 
 ./configure --prefix=/somewhere/else/than/usr/local 
 
-then add the path to your .bashrc file
+then add the path to your .bashrc file, to do so:
+    
+    1. Go to your home folder
+    2. open the file in nano: nano .bashrc
+    3. Add the path to the .bashrc file 
+          PATH=$PATH:/path/bin/smalt
+    4. Reload the .bashrc file
+          source ~/.bashrc
+
 
 ### Metagenomes to viromes ###
 
