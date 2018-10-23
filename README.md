@@ -72,7 +72,7 @@ make install
 
 If you don't have permissions in /usr/local/bin redirect them to a new directory, for example: 
 
-./contigure --prefix=/somewhere/else/than/usr/local 
+./configure --prefix=/somewhere/else/than/usr/local 
 
 then add the path to your .bashrc file
 
