@@ -53,6 +53,29 @@ The following tools are downloaded and installed by setup.sh file if not already
 * **hisat2** https://ccb.jhu.edu/software/hisat2/index.shtml
 * **diamond** https://github.com/bbuchfink/diamond
 
+### Installing <this software> dependencies manually
+  
+* **SMALT** 
+
+Download smalt: wget http://sourceforge.net/projects/smalt/files/smalt-0.7.6-static.tar.gz
+
+tar zxvf smalt-0.7.6-static.tar.gz
+
+cd smalt-0.7.6
+
+./configure
+
+make
+
+make install
+
+
+If you don't have permissions in /usr/local/bin redirect them to a new directory, for example: 
+
+./contigure --prefix=/somewhere/else/than/usr/local 
+
+then add the path to your .bashrc file
+
 ### Metagenomes to viromes ###
 
 ![vrmg!](vrmgfrap_pic.png)
