@@ -4,6 +4,8 @@ Go to the folder where all fasta of the genomes are and run the script:
 
 python erase>.py
 
+
+
 If the files end in .fna use: 
 If the files end in .fasta use: 
 
