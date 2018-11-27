@@ -1,13 +1,8 @@
-#1.##Concatenate databases: erase>.py
+#1.##Concatenate databases: database_maker.py
 Script to concatenate database when the genome has several contigs or plasmids
 Go to the folder where all fasta of the genomes are and run the script: 
 
-python erase>.py
-
-
-
-If the files end in .fna use: 
-If the files end in .fasta use: 
+python database_maker.py
 
 #2.##Get mean genome size from the database: genome_size2.py
 Go to the folder where the multifasta database is and run
@@ -33,9 +28,7 @@ output: heatmap_all_normalized_per_million.png
 
 #5.##Get identities for fragment recruitment plots: fragplot2.py 
 
-FIX. Maybe erase.py can create the file: create a file with the name: db_id_name.txt that needs to be in the results folder. 
-This file should contain 
-ID \t Genome name \t genome length 
+Move db_id_name.txt created by database_maker.py to the results folder
 
 FIX: metaID takes the names from the name before "_vs_", and takes the first field which is the metagenome ID 
 
@@ -43,7 +36,7 @@ python fragplot2.py [absolute path to database folder] [absolute path to results
 
 Output: GenomeID_in_metaID_identitied.tab 
 
-#6.##Get fragment recriotment plots: Recruitment_Plot2.R
+#6.##Get fragment recruitment plots: Recruitment_Plot2.R
 The script need to be in the results folder
 Rscript Recruitment_Plot2.R [genomeID] [path_to_results_folder] "GenomeID_in_metaID_identitied.tab"
 
