@@ -4,6 +4,8 @@ Go to the folder where all fasta of the genomes are and run the script:
 
 python database_maker.py
 
+This will create another file called db_id_name.txt
+
 #2.##Get mean genome size from the database: genome_size2.py
 Go to the folder where the multifasta database is and run
 
