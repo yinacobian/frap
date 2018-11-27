@@ -28,17 +28,13 @@ output: heatmap_all_normalized_per_million.png
 
 #5.##Get identities for fragment recruitment plots: fragplot2.py 
 
-Move db_id_name.txt created by database_maker.py to the results folder
-
-FIX: metaID takes the names from the name before "_vs_", and takes the first field which is the metagenome ID 
-
 python fragplot2.py [absolute path to database folder] [absolute path to results folder] 
 
-Output: GenomeID_in_metaID_identitied.tab 
+Output: GenomeID_in_metaID_identities.tab 
 
 #6.##Get fragment recruitment plots: Recruitment_Plot2.R
 The script need to be in the results folder
-Rscript Recruitment_Plot2.R [genomeID] [path_to_results_folder] "GenomeID_in_metaID_identitied.tab"
+Rscript Recruitment_Plot2.R [genomeID] [path_to_results_folder] "GenomeID_in_metaID_identities.tab"
 
 To run all the fragment recruitment plots in the results folder:
 for i in “genomeID_*identities.tab; do echo $i; Rscript Recruitment_Plot2.R genomeID path_to_results_folder $i; done
