@@ -70,14 +70,6 @@ foreach(@ARGV) {
 	open $filehandlers{$_}, '<' , $_  or die "Can't open $_ for output: $!";
 	my $filename = (split(/\//,$_))[-1];
 	my $sample_id = (split(/\./,$filename))[1];
-	#my @sample = split(/\_/,$sample_id);
-	
-	#getting IDS from filename, this need to be much more general
-
-	#my $kk = pop @sample;
-	#$kk = pop @sample;
-	#$kk = pop @sample;
-	#$kk = join('_',@sample);
 	$samples{$_} = $sample_id;	
 }
 
@@ -93,10 +85,8 @@ while(<TJ>) {
 foreach(@ARGV) {
 	my $f_id=$_;
 	while(readline($filehandlers{$f_id})) {
-#next if $_=~/^\-$/;
 	my @fields=split;
-	print "$fields[1]\n" unless exists $list{$f_id}->{$fields[1]}; 
-	$list{$f_id}->{$fields[1]}=$list{$f_id}->{$fields[1]}+$fields[0];
+	$list{$f_id}->{$fields[1]}=+$fields[0];
 	}
 }
 foreach(@glob_ARGV) {
