@@ -67,7 +67,7 @@ print "@IDS\n";
 #} elsif ($map eq 'smalt') {
 
 #foreach(@IDS) {
-#$run="smalt map -n 20 -f sam -y 0.98 -o $ARGV[2]/$_"."_vs_$db_id.sam $db_id_path $ARGV[1]/$_.fasta";
+#$run="smalt map -n 20 -f sam -y 0.96 -o $ARGV[2]/$_"."_vs_$db_id.sam $db_id_path $ARGV[1]/$_.fasta";
 #print "$run\n";
 #system $run;
 #}
