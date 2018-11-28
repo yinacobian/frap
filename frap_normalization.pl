@@ -105,15 +105,18 @@ foreach(@glob_ARGV) {
 	}
 }
 
-print "-";
+#print "-\t";
 foreach(@glob_ARGV) {
-	print "\t$samples{$_}"
+	print "$samples{$_}";
+#	unless(  \$_ == \$glob_ARGV[-1]  ) {
+        print "\t";
+#    	}
 }
-print "\n";
+print "id\n";
 
 foreach(@order) {
 	my $g_id=$_;
-	print "$desc{$g_id}\t";
+	print "$desc{$g_id}";
 	foreach(@glob_ARGV) {
         	my $f_id=$_;
 		if ($hits_only) {
