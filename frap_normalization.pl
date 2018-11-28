@@ -113,7 +113,7 @@ print "\n";
 
 foreach(@order) {
 	my $g_id=$_;
-	print "$g_id";
+	print "$desc{$g_id}\t";
 	foreach(@glob_ARGV) {
         	my $f_id=$_;
 		if ($hits_only) {
@@ -126,7 +126,7 @@ foreach(@order) {
 	       }	       
 		
 	}
-	print "\t$desc{$g_id}\n";
+	print "\t$g_id\n";
 }
 
 
