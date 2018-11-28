@@ -7,13 +7,17 @@ Output: database.fasta
 Output: db_id_name.txt
 
 #2.##Get mean genome size from the database: genome_size2.py
-Go to the folder where the multifasta database is and run
 
+FIX: what's the name of this program in the folder now??
+
+Go to the folder where the multifasta database is and run
 Use: python genome_size2.py
 Output: stdout is mean = [number] bp
 
-#3.##FRAP :jmf5.pl and frap_normalizarion.pl
-jmf5.pl [path to database file] [path to dataset folder] [path to results folder] [smalt] [mean genome size]
+#3.##FRAP :jmf4.pl and frap_normalizarion.pl
+jmf4.pl [path to database file] [path to dataset folder] [path to results folder] [smalt] [mean genome size]
+
+FIX: Ask the user the number of threads to use. 
 
 #4.##Heatmap from any frap .tab output: Plot_Heatmap.R 
 Make sure to have the R libraries: gplots and RColorBrewer 
