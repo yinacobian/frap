@@ -116,7 +116,7 @@ print "id\n";
 
 foreach(@order) {
 	my $g_id=$_;
-	print "$desc{$g_id}";
+	print "\t$desc{$g_id}";
 	foreach(@glob_ARGV) {
         	my $f_id=$_;
 		if ($hits_only) {
