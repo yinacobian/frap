@@ -20,7 +20,7 @@ png(outname,
   width = 5*800,    
   height = 5*400,
   res = 350,            
-  pointsize = 8)       
+  pointsize = 6)       
 
 heatmap.2(mat_data,
   key = T,
@@ -32,7 +32,8 @@ heatmap.2(mat_data,
   #col=my_palette,       # use on color palette defined earlier
   dendrogram="both",    # only draw a row dendrogram
   keysize = 0.8,
-  lhei = c(3,7),
+  #lhei = c(3,7),
+  cexRow = 1.2,
   key.xlab = "abundance"
 )
 
