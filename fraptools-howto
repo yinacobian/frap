@@ -41,3 +41,15 @@ for i in “genomeID_*identities.tab; do echo $i; Rscript Recruitment_Plot2.R ge
 
 Output: fragplot_metaID_genomeID.png
 
+Scripts needed:
+frap-plot.pl : make heatmap, coverage plots, fragment recruitment plots
+frap-clean.pl : delete sam files 
+
+1) Run frap: jmf.pl
+2) Make plots: frap-plot.pl
+3) Clean intermediate files: frap-clean.pl
+
+
+
+
+
