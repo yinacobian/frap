@@ -30,7 +30,7 @@ heatmap.2(mat_data,
   trace="none",         # turns off trace lines inside the heat map
   margins =c(15,32),    # widens margins around plot
   #col=my_palette,       # use on color palette defined earlier
-  dendrogram="both",    # only draw a row dendrogram
+  dendrogram="both",    #draw dendrogram
   keysize = 0.8,
   #lhei = c(3,7),
   cexRow = 1.2,
