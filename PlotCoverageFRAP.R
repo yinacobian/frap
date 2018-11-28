@@ -9,7 +9,7 @@ covfile <- paste (path, "/","cov_",genomeid,"_in_",samplename,".tab", sep="")
 coverage <- read.table (covfile)
 namesfile <- paste (path, "/","db_id_name.txt", sep="")
 namesfile <- read.table (namesfile, sep='\t', row.names=1)
-genomename <- namesfile [genomeid, ]
+genomename <- namesfile [genomeid, "V2"]
 avgcov <- (sum(coverage$V2))/(length(coverage$V2))
 okavgcov <-(format (avgcov, digits=2))
 
