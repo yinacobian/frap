@@ -112,7 +112,7 @@ foreach(@glob_ARGV) {
         print "\t";
     	}
 }
-print "id\n";
+print "\tid\n";
 
 foreach(@order) {
 	my $g_id=$_;
