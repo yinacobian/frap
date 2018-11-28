@@ -32,12 +32,12 @@ python fragplot2.py [absolute path to database folder] [absolute path to results
 
 Output: GenomeID_in_metaID_identities.tab 
 
-#6.##Get fragment recruitment plots: Recruitment_Plot2.R
+#6.##Get fragment recruitment plots: Recruitment_Plot3.R
 The script need to be in the results folder
-Rscript Recruitment_Plot2.R [genomeID] [path_to_results_folder] "GenomeID_in_metaID_identities.tab"
+Rscript Recruitment_Plot3.R [genomeID] [path_to_results_folder] "GenomeID_in_metaID_identities.tab"
 
 To run all the fragment recruitment plots in the results folder:
-for i in “genomeID_*identities.tab; do echo $i; Rscript Recruitment_Plot2.R genomeID path_to_results_folder $i; done
+for i in “genomeID_*identities.tab; do echo $i; Rscript Recruitment_Plot3.R genomeID path_to_results_folder $i; done
 
 Output: fragplot_metaID_genomeID.png
 
