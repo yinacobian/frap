@@ -49,7 +49,6 @@ frap-clean.pl : delete sam files
 2) Make plots: frap-plot.pl
 3) Clean intermediate files: frap-clean.pl
 
-
-
+FIX: Script to get the top 10 genomes. By sum of fractional abundances. Output: ID \t Name \t genome length ** same as db_id_name.txt
 
 
