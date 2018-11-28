@@ -32,13 +32,12 @@ imagename <- paste (path, "/","fragplot_", samplename, "_", genomeid,".png", sep
 png(imagename,width=25,height=10,units="cm",res=600)
 
 plot(c(1,2), c(3,4),type="n",yaxs="i", #yaxs dice que empiece el eje y justo en 0
-     xlim = c(0,genomelength), ylim = c(80, 100.5), xlab = paste(genomename, genomeid, sep = " "), ylab = "Identity",
+     xlim = c(0,genomelength), ylim = c(96, 100.5), xlab = paste(genomename, genomeid, sep = " "), ylab = "Identity",
      main = samplename)
 
 for (i in 0:length(fragplot$V1)){
   
   lines(c(fragplot$V2[i], fragplot$V2[i]+fragplot$V3[i]), c(fragplot$V4[i], fragplot$V4[i]))
 }
-lines(c(0-(genomelength*0.04),(genomelength+(genomelength*0.04))), c(96,96), col="red") #multiply by 0.04 because by default, the axis start 4% away from 0
 
 dev.off()
