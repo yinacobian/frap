@@ -1,1 +1,15 @@
+Bacteria refseq is too big for smalt to create an index. A possible soution is to split the database and run FRAP on the individual parts. 
 
+*Smalt only takes 1050 bacteria genomes. We don't know why. It may be related to the size in nucleotides of the database. 
+
+1. Download bacteria refseq
+
+2. Run database_maker.py
+
+3. Split the database in parts with fasta_spliter.pl (in this case 6 parts) 
+    perl fasta_spliter.pl --n-parts 6 --part-num-prefix part database.fasta
+    
+4. Run frap on each one of the database parts
+
+5. Merge the all_normlalized.tab tables
+   You can use cat, but need to delete the headers of each part, but the first one.  
