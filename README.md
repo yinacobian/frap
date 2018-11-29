@@ -98,4 +98,7 @@ Coverage plots for top 5 elements in the database with highest average FRAP valu
 
 Fragment recruitment plots for top 5 elements in the database with highest average FRAP values across the dataset
 
- 	
+### Dependencies for graphics outputs ###
+
+* **samtools** Version 1.6 
+* **R**	with libraries
