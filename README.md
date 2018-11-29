@@ -100,5 +100,5 @@ Fragment recruitment plots for top 5 elements in the database with highest avera
 
 ### Dependencies for graphics outputs ###
 
-* **samtools** Version 1.6 
-* **R**	with libraries
+* **samtools** Version 1.6 or higher http://www.htslib.org/doc/samtools-1.6.html
+* **R**	with libraries gplots RColorBrewer
