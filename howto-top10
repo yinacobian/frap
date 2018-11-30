@@ -1,10 +1,5 @@
-T <- read.table("example1.txt", sep="\t", header=TRUE)
-
+T <- read.table("all_normalized_million.txt", sep="\t", header=TRUE)
 T <- T [rowSums(T[,(2:(ncol(T)-1))]) > 0,]
-
 T <- T[order((rowSums(T[,(2:(ncol(T)-1))])),decreasing=TRUE),]
-
-top10 <- c(T$id[1:10])
-
-write(top10, file = "top10.txt",
-      ncolumns = 1, append = FALSE, sep = " ")
+top10 <- c(as.character(T$id[1:10]))
+write(top10, file = "top10_dbid.txt",ncolumns = 1, append = FALSE, sep = " ")
