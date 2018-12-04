@@ -11,8 +11,15 @@ IDS= [] #empty list to keep the IDS of the genomes
 
 shutil.copyfile(path_to_database+"/"+"db_id_name.txt", path+"/"+"db_id_name.txt")
 
+topIDS =[]
+with open(path+"/"+"top10_dbid.txt") as abundants_IDS:
+	for line in abundants_IDS:
+		topIDS.append(line)
+
 with open(path+"/"+"db_id_name.txt", "r") as idfile: #opening the IDs file
 	for line in idfile:
+		ID = line.split("\t")[0]
+		if ID in topIDS:
 		IDS.append(line.split("\t")[0]) #getting the first column, which has the IDS
 
 
