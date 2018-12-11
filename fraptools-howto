@@ -26,6 +26,9 @@ Rscript Plot_Heatmap.R [absolute path to results folder]
 output: heatmap_all_normalized_per_million.png 
 
 
+#Get the 10 most abundant contigs:
+Rscript GetTop10.R [path to results folder]
+
 #5.##Get identities for fragment recruitment plots: fragplot2.py 
 
 python fragplot2.py [absolute path to database folder] [absolute path to results folder] 
