@@ -102,3 +102,10 @@ Fragment recruitment plots for top 5 elements in the database with highest avera
 
 * **samtools** Version 1.6 or higher http://www.htslib.org/doc/samtools-1.6.html
 * **R**	with libraries gplots RColorBrewer
+
+
+### FRAP vs bacteria representative genomes ###
+
+Smalt is not very good at creating indexes for large databases, for example all bacteria representative genomes (23Gb). To overcome this limitation you can split the databse into several fragments, run FRAP on each database fragments and then concatenate your results. Here is an example of how to do it: 
+
+
