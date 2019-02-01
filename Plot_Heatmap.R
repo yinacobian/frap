@@ -1,3 +1,6 @@
+# if a package is missing, install it by typing:
+# install.packages("gplots", repos='http://cran.us.r-project.org')
+
 args = commandArgs(trailingOnly=TRUE)
 
 path <- args[1] #path to results folder
