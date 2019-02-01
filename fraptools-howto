@@ -7,6 +7,10 @@ Output: database.fasta
 Output: db_id_name.txt
 *Fix: it is not making the db_id_names.txt properly. It is only giving the first ID of the database*to 
 
+*To manually create the db_id_name.txt file:
+grep '>' Fukami_sediment_contigs.fasta | cut -c 2- > names_Fukami_sediment_contigs
+paste names_Fukami_sediment_contigs names_Fukami_sediment_contigs > db_id_name.txt
+
 #2.##Get mean genome size from the database: genome_size2.py
 
 FIX: what's the name of this program in the folder now??
