@@ -34,6 +34,10 @@ output: heatmap_all_normalized_per_million.png
 #Get the 10 most abundant contigs:
 Rscript GetTop10.R [path to results folder]
 
+#Get a fasta file with the top 10 contigs:
+perl extract_fasta_id.pl ids.txt multifasta.fasta > ids_in_multifasta.fasta
+perl extract_fasta_id.pl top10_dbid.txt globalvirome_cobian2016_reference_library_cdhit98.fasta > top10hits_global_virome.fasta
+
 #5.##Get identities for fragment recruitment plots: fragplot2.py 
 
 python fragplot2.py [absolute path to database folder] [absolute path to results folder] 
@@ -58,5 +62,8 @@ frap-clean.pl : delete sam files
 3) Clean intermediate files: frap-clean.pl
 
 FIX: Script to get the top 10 genomes. By sum of fractional abundances. Output: ID \t Name \t genome length ** same as db_id_name.txt
+
+
+
 
 
