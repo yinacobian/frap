@@ -1,0 +1,17 @@
+#make heatmap from dinucleotide frequencies
+#1.read the table
+
+D2 <- read.table("dinucleotides_moresoils.txt", header=TRUE)
+D_matrix <- (D2[,(2:(ncol(D2)-1))])
+names <- D2[,1]
+rownames (D_matrix) <- as.vector (names)
+
+#3.create heatmap
+
+heatmap (t(D_matrix), scale="col", col=terrain.colors(200,1))
+
+#4.create PDF of heatmap
+
+png(filename="FJL_plus_soils_dinucleotides.png", width=20, height=15, units="cm", res=500)
+ heatmap (t(D_matrix), scale="col", col=terrain.colors(200,1))
+ dev.off()
