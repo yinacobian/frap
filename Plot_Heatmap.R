@@ -11,6 +11,9 @@ library(gplots)
 library(RColorBrewer)
 
 data <- read.table(tabFile, sep = "\t", header = T)
+#the database is supposed to output the name sin the first column and the ids in the last one. Global virome is not doing thi...
+#to fix, you can paste the names again th the first column
+#data[, "X"] <- data$id
 rnames <- data[,1]                            # assign labels in column 1 to "rnames"
 mat_data <- data.matrix(data[2:(ncol(data)-1)]) # transform column 2 to end into a matrix
 rownames(mat_data) <- rnames                  # assign row names
