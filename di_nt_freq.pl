@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+#to use : perl di_nt_freq.pl file.fasta
+
 use strict;
 
 my ($genome, $head, $tail);
