@@ -3,7 +3,7 @@ args = commandArgs(trailingOnly=TRUE)
 path <- args[1] 
 
 in_file <- paste (path, "/","all_normalized_per_million.txt", sep="")
-T <- read.table(in_file, sep="\t", header=TRUE)
+T <- read.csv(in_file, sep="\t", header=TRUE)
 
 T <- T [rowSums(T[,(2:(ncol(T)-1))]) > 0,]
 T <- T[order((rowSums(T[,(2:(ncol(T)-1))])),decreasing=TRUE),]
