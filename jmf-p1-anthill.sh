@@ -6,7 +6,7 @@
 
 #$ -t 1-11
 
-# To submitt the job array : qsub -j y jmf-anthill.sh 
+# To submitt the job array : qsub jmf-p1-anthill.sh 
 
 DS_FOLDER=/home3/acobian/cobian2018CF/P04_polished
 DB_PATH=/home3/acobian/DBS
