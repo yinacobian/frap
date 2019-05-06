@@ -4,6 +4,7 @@ args = commandArgs(trailingOnly=TRUE)
 genomeid <- args[1]
 path <- args[2] #path to result folder
 fragplot <- args[3]
+samplename <- args[4]
 
 #print(genomeid)
 namesfile <- paste (path, "/","db_id_name.txt", sep="")
@@ -15,18 +16,8 @@ genomename <- namesfile[genomeid,"V2"]
 genomelength <- namesfile[genomeid,"V3"]
 print(genomelength)
 
-samplename <- strsplit (fragplot, "identities")
-
-samplename <- samplename[[1]][1]
-
-samplename <- strsplit(samplename, "in")
-samplename <- samplename[[1]][2] 
-
-samplename <- strsplit(samplename,"_")
-samplename <- samplename[[1]][2]
-
-
-fragplot <- read.table(fragplot, sep='\t')
+identityfile <- paste (path, "/", "genomeid", "_", samplename, "_identities.tab", sep="")
+fragplot <- read.table(identityfile, sep='\t')
 
 imagename <- paste (path, "/","fragplot_", samplename, "_", genomeid,".png", sep="")
 png(imagename,width=25,height=10,units="cm",res=600)
