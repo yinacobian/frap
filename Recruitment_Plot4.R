@@ -3,8 +3,7 @@ args = commandArgs(trailingOnly=TRUE)
 
 genomeid <- args[1]
 path <- args[2] #path to result folder
-fragplot <- args[3]
-samplename <- args[4]
+samplename <- args[3]
 
 #print(genomeid)
 namesfile <- paste (path, "/","db_id_name.txt", sep="")
