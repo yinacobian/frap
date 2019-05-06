@@ -15,7 +15,7 @@ genomename <- namesfile[genomeid,"V2"]
 genomelength <- namesfile[genomeid,"V3"]
 print(genomelength)
 
-identityfile <- paste (path, "/", "genomeid", "_", samplename, "_identities.tab", sep="")
+identityfile <- paste (path, "/", genomeid, "_in_", samplename, "_identities.tab", sep="")
 fragplot <- read.table(identityfile, sep='\t')
 
 imagename <- paste (path, "/","fragplot_", samplename, "_", genomeid,".png", sep="")
