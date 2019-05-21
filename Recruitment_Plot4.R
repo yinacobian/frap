@@ -28,6 +28,8 @@ plot(c(1,2), c(3,4),type="n",yaxs="i", #yaxs dice que empiece el eje y justo en 
 for (i in 0:length(fragplot$V1)){
   
   lines(c(fragplot$V2[i], fragplot$V2[i]+fragplot$V3[i]), c(fragplot$V4[i], fragplot$V4[i]))
+  # to change colors or symbols use: lines(c(fragplot$V2[i], fragplot$V2[i]+fragplot$V3[i]), c(fragplot$V4[i], fragplot$V4[i]),col="darkorchid4", pch=1 )
+
 }
 
 dev.off()
