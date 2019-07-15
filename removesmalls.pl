@@ -1,6 +1,7 @@
+#!/usr/bin/perl
+
 ## removesmalls.pl
 ## Use: perl removesmalls.pl 1000 file.fasta > newfile.fasta
-#!/usr/bin/perl
 use strict;
 use warnings;
 
