@@ -108,4 +108,10 @@ Fragment recruitment plots for top 5 elements in the database with highest avera
 
 Smalt is not very good at creating indexes for large databases, for example all bacteria representative genomes (23Gb). To overcome this limitation you can split the databse into several fragments, run FRAP on each database fragments and then concatenate your results. Here is an example of how to do it: 
 
+### About your database ###
+
+Make sure that your database headers are unique, otherwise the counts would be wrong.
+You can rename your database headers to consecutive numbers with this command:
+
+awk '/^>/{print ">simbiodiniumA" ++i; next}{print}' < db_names.fasta > db_names_consecutive.fasta
 
