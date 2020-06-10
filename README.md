@@ -19,7 +19,7 @@ By using the same method across databases and datasets the comparissons are eass
 
 Use:
 
-jmf4.pl [path to directory containing the datasets] [path to database fasta file] [path to results folder] [mapper to use: smalt or hisat] [average genome length to use, recommended 50000 for phages]
+jmf4.pl [path to database fasta file] [path to the directory containing the datasets] [path to results folder] [mapper to use: smalt or hisat] [average genome length to use, recommended 50000 for phages]
 
 Example: 
 
