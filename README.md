@@ -129,4 +129,7 @@ For example:
 
 1989177:>NC_033780.2 Mythimna unipuncta granulovirus isolate MyunGV#8, complete genome
 
+Replace # with _ : 
+
+`sed -i 's/#/_/g' all_viral_genomic.fna`
 
