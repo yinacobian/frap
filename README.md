@@ -115,3 +115,6 @@ You can rename your database headers to consecutive numbers with this command:
 
 awk '/^>/{print ">simbiodiniumA" ++i; next}{print}' < db_names.fasta > db_names_consecutive.fasta
 
+Also check that your database has no special characters on the names or IDS, for example having a # in the middle of a name would ruin the database. 
+
+
