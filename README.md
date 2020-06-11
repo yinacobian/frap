@@ -121,13 +121,13 @@ For example:
 
 `grep -n '#' all_viral_genomic.fna`
 
-363326:>NC_025401.1 Sunguru virus isolate Ug#41, complete genome
+  363326:>NC_025401.1 Sunguru virus isolate Ug#41, complete genome
 
-1398717:>NC_030888.1 Sclerotium hydrophilum virus 1 isolate ShR#20 putative RNA-dependent RNA polymerase gene, complete cds
+  1398717:>NC_030888.1 Sclerotium hydrophilum virus 1 isolate ShR#20 putative RNA-dependent RNA polymerase gene, complete cds
 
-1398745:>NC_030891.1 Sclerotium hydrophilum virus 1 isolate ShR#77 hypothetical protein genes, complete cds
+  1398745:>NC_030891.1 Sclerotium hydrophilum virus 1 isolate ShR#77 hypothetical protein genes, complete cds
 
-1989177:>NC_033780.2 Mythimna unipuncta granulovirus isolate MyunGV#8, complete genome
+  1989177:>NC_033780.2 Mythimna unipuncta granulovirus isolate MyunGV#8, complete genome
 
 Replace # with _ : 
 
