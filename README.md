@@ -1,6 +1,6 @@
 # FRAP
-
 Fragment Recruitment Assembly Purification 
+
 Quick and simple bioinformatics!
 
 ![fragment recruitment assembly purification!](FRAP_pic.png)
