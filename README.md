@@ -1,9 +1,9 @@
 # FRAP
-![fragment recruitment assembly purification!](FRAP_pic.png)
 
 Fragment Recruitment Assembly Purification 
-
 Quick and simple bioinformatics!
+
+![fragment recruitment assembly purification!](FRAP_pic.png)
 
 ### What is FRAP? ###
 
